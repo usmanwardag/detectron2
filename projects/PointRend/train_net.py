@@ -109,6 +109,7 @@ def setup(args):
     add_pointrend_config(cfg)
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
+    cfg.DATASETS.TEST = ()
     cfg.freeze()
     default_setup(cfg, args)
     return cfg
